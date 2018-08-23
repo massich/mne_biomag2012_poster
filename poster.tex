@@ -214,10 +214,10 @@
 % \beamertemplateshadingbackground{shadingcolor!50}{white}
 \begin{frame}[plain,t,c]
 \postertitle{%
-\smallskip
+\bigskip
 % Trends in MEG/EEG data processing using MNE
-MEG and EEG data processing using MNE-Python:\\
-News from the trenches
+MNE-Python, a toolkit for neurophysiological data
+\smallskip
 }
 \vspace*{-0.2em}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -237,41 +237,55 @@ News from the trenches
 \vspace*{-0.2em}%
 \mybox[width=0.67\linewidth, opacity=0., color=white]{%
     \small
-    \def\PARISTECH{\unskip$^1$}
+    \def\INRIA{\unskip$^1$}
     \def\NSPIN{\unskip$^2$}
+    \def\PARISTECH{\unskip$^3$}
+    \def\NYU{\unskip$^4$}
+    \def\UCB{\unskip$^{5}$}
+    \def\AALTO{\unskip$^{6}$}
+    \def\MGH{\unskip$^7$}
+    \def\ILMENAU{\unskip$^8$}
+    \def\MARBURG{\unskip$^9$}
     \def\UW{\unskip$^3$}
-    \def\MGH{\unskip$^4$}
-    \def\NYU{\unskip$^5$}
-    \def\ILMENAU{\unskip$^6$}
-    \def\MARBURG{\unskip$^7$}
     \def\LEUVEN{\unskip$^{8}$}
-    \def\UCB{\unskip$^{9}$}
     \def\UCSF{\unskip$^{10}$}
-    \def\AALTO{\unskip$^{11}$}
 
     \begin{center}
     % \vspace*{-0.8ex}%
     \mbox{\hspace{-1em}%
-    \name{A. Gramfort\PARISTECH$^{,}$\NSPIN, D.A. Engemann\NSPIN, E. Larson\UW, M. Jas\PARISTECH, C. Brodbeck\NYU}}
+      \name{
+        J. Massich\INRIA$^{,}$\NSPIN,
+        E. Larson\UW,
+        D.A. Engemann\INRIA$^{,}$\NSPIN,
+        J. Lepp\"akangas\PARISTECH,
+      }}
+
     \mbox{\hspace{-1em}%
-    \name{T. Brooks\NYU, J. Lepp\"akangas\PARISTECH, M. van Vliet\LEUVEN, C. Brodbeck\NYU, , M. Wronkiewicz\UW}}
+      \name{
+        M. Jas\PARISTECH,
+        C. Brodbeck\NYU,
+        T. Brooks\NYU,
+        J.R. King\NYU,
+        C. Holdgraph\UCB,
+      }}
+
     \mbox{\hspace{-1em}
-    \name{D. Strohmeier\ILMENAU, J. Sassenhagen\MARBURG, J.R. King\NYU, C. Holdgraph\UCB, Y. Bekhti\PARISTECH}}
-    \mbox{\hspace{-1em}
-          \name{F. Raimondo\NSPIN, L. Parkkonen\AALTO, M. H\"am\"al\"ainen\MGH$^,$\AALTO}}
-	\vspace{0.05cm}
+      \name{
+        M. van Vliet\AALTO,
+        M. H\"am\"al\"ainen\MGH
+        A. Gramfort\INRIA$^{,}$\NSPIN,
+      }}
+
+  \vspace{0.05cm}
 	\def\affilbr{\hspace{0.2cm}}
     \parbox{13cm}{\tiny\center
-                 \PARISTECH Telecom ParisTech, CNRS LTCI, Paris, France \affilbr
+                 \INRIA INRIA, Universit\'{e} Paris-Saclay, France \affilbr
                  \NSPIN CEA-INSERM Neurospin, Gif-sur-Yvette, France \affilbr\\
-                 \UW Univ. of Washington, USA \affilbr
-                 \MGH MGH, Harvard Med. School, USA \affilbr
-                 \NYU New York Univ., USA \affilbr\\
-                 \ILMENAU TU Ilmenau, Germany \affilbr
-                 \MARBURG Philipps-Universität Marburg, Germany \affilbr
-                 \UCSF UC San Francisco, USA \affilbr
+                 \PARISTECH Telecom ParisTech, CNRS LTCI, Paris, France \affilbr
+                 \NYU New York Univ., USA \affilbr
                  \UCB UC Berkeley, USA \affilbr\\
-                \AALTO Aalto Univ., Espoo, Finland \affilbr
+                 \AALTO Aalto Univ., Espoo, Finland \affilbr
+                 \MGH MGH, Harvard Med. School, USA \affilbr
                  }
     \end{center}
 }
@@ -365,12 +379,19 @@ News from the trenches
     \vspace{0.5em}
     \begin{minipage}{\linewidth}
     \subsection{What's new}
-    \mydot Maxwell Filter (SSS), dipole fitting, RAP-MUSIC, interpolation of bad EEG/MEG channel, automated covariance regularization, multi-taper time-frequency, deep structures in source spaces, basic ECoG support, segment annotations,
-    interactive viz (TFR \& ERP)\\
+      \mydot 
+          New readers, 
+          Picard algorithm to perform ICA,
+          improved Annotations support,
+          improved memory management,
+          EEG electrodes projection,
+          eLORETA noise normalization,
+          tilt angle determination
+          \\
     \mydot \url{http://martinos.org/mne/dev/whats\_new.html}
     \begin{center}
         \vspace*{-1.em}%
-        \includegraphics[width=0.95\linewidth]{mne_report.png}%
+        \includegraphics[width=0.95\linewidth]{mne_website}%
     \end{center}
     \end{minipage}
 \end{minipage}
@@ -435,10 +456,10 @@ News from the trenches
             \mydot Python: general-purpose, high-level language \\
             \mydot Free: can run on a cluster without license problems\\
             \mydot Permissive BSD license: allows use in commercial products\\
-            \mydot 47 contributors in last 12 months $\approx$ 13 person-years of effort
+            \mydot 60 contributors in last 12 months $\approx$ 26 person-years of effort
             \begin{center}
                 \vspace{-0.5em}
-                \includegraphics[width=0.9\linewidth]{sloc_june_2016_v2.png}%
+                \includegraphics[width=0.9\linewidth]{sloc_july_2018.png}%
             \end{center}
         \end{myexampleblock}
         \vspace{-0.8em}
@@ -447,7 +468,7 @@ News from the trenches
                 \mydot Mailing list: mne\_analysis@nmr.mgh.harvard.edu\\
                 \mydot http://martinos.org/mne/ (general doc)\\
                 \mydot http://martinos.org/mne/stable/getting\_started.html\\
-                \mydot http://martinos.org/mne/stable/tutorials.html\\
+                \mydot http://martinos.org/mne/stable/documentation.html \\
                 \mydot http://martinos.org/mne/auto\_examples/ (>90 demos)\\
             \end{minipage}
         \end{myalertblock}
